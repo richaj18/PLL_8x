@@ -18,7 +18,7 @@ The lab sessions carried out for Layout using the Ngspice EDA Tool.
 10. References
 11. Acknowledgements
 
-<h3> Phase Locked Loop - Theory </h3>
+<h2> Phase Locked Loop - Theory </h2>
 
 The SOC and other ICs requires the clock signal to perform certain specific functions,<br>
 and thus we need to generate the clock signal of a particular frequency without any frequency <br>
@@ -40,7 +40,7 @@ Futher dwelling into each part of this control system
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/PLL%20loop.png)
 
-<h4> Phase Frequency detector(PFD) </h4>
+<h3> Phase Frequency detector(PFD) </h3>
 
 There are two inputs to it - the reference signal from the Quartz crystal and the output signal from the VCO. <br>
 It detects the phase difference between the two. <br>
@@ -80,7 +80,7 @@ such that when both are 1 the flip flop is reset. <br>
 But the disadvantage of this is the Dead Zone. When the phase difference between the refernce signal and output signal is <br>
 very less, then due to the delay of gates it is not able to detect the difference and might be skipped. <br>
 
-<h4> Charge Pump </h4>
+<h3> Charge Pump </h3>
 
 PFD generates the digital signal, but the input to the VCO is an analogue signal, thus Charge Pump converts the <br>
 output of the PFD into analogue signal. This can be done through "Current Steering" circuit ie. by charging <br>
@@ -92,7 +92,7 @@ are interested in the avarage time of [UP-DOWN] which is achieved by observing t
 The output voltage may have fluctuations due to the rise and fall times of UP and DOWN, and thus to have a smooth transition
 we have a loop filter.
 
-<h4> Loop Filter </h4>
+<h3> Loop Filter </h3>
 
 Only one capacitor at the output the Charge pump makes the system unstable because if we see the frequency domain analysis of
 the circuit then there will be two poles at in the transfer function which makes it oscillating anf highly unstable.
@@ -105,7 +105,7 @@ The values of R1 and Cx are selected such that the output signal(input to the VC
 Also, we want the output signal not to fluctuating, so
 <b> Loop BW = fref/10 </b>
 
-<h4> Voltage Controlled Oscillator and Frequency Divider </h4>
+<h3> Voltage Controlled Oscillator and Frequency Divider </h3>
 
 Till now we have achieved two things - accurancy and spectral purity. Now for flexibility Current Starved is used in VCO.
 VCO is a combination of odd number of inverters and in particular the ring oscillator.<br>
@@ -118,15 +118,15 @@ The frequency Divider is as follows:
 ![](https://github.com/richaj18/PLL_8x/blob/main/frequency%20divider.PNG)
 
 
-<h3> Tool Setup </h3>
+<h2> Tool Setup </h2>
 
-<h4> NgSpice Tool </h4>
+<h3> NgSpice Tool </h3>
 NgSpice directly simulates the circuit(.cir) file given and plots the results according to the specifications mentioned in the
 circuit file.
 To execute the circuite file, on the CMD window type : 
 <b> <directory_name_where_files_are_present> <file_name>.cir </b>
 
-<h4> Magic Tool </h4>
+<h3> Magic Tool </h3>
 Magic is used for designing the layout file, write the GDS file for fabrication and also to extracrt the parisitics.
 To execute the file, on the CMD window type :
 <b> <directory> magic -T <technology_file_name_from_PDK> <layout_file> </b>
@@ -134,7 +134,7 @@ To execute the file, on the CMD window type :
 In this project, we have used sky130A.tech for the 130nm node technology from Google Skywater library.
 
 
-<h3> Development Flow </h3>
+<h2> Development Flow </h2>
 
 1. Specifications for the design are initiated
 2. Circuit is being made to meet the specifications in pre-layout 
@@ -144,7 +144,7 @@ In this project, we have used sky130A.tech for the 130nm node technology from Go
 6. Post Layput Simulation 
 7. GDS file and Tapeout
 
-<h3> Specifications </h3>
+<h2> Specifications </h2>
 
 
 
