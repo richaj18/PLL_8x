@@ -208,13 +208,44 @@ Simulation result :
 
 <b> Frequency Divider </b>
 ![](https://github.com/richaj18/PLL_8x/blob/main/FD%20plot.PNG)
- <b> Blue : </b> Input Signal
+ <b> Blue : </b> Input Signal<br>
  <b> Red : </b> Output Signal
 
+Similarly pre layout simulations were carried out for all the circuits of the PLL.
 
+<h3> Charge Pump </h3>
 
+<b> With UP and DOWN both 0 </b>
+![](https://github.com/richaj18/PLL_8x/blob/main/CP%20plot%20with%20up%20and%20down%200.PNG)
+<br>
 
+<b> With 'UP' Sigmal</b>
+![](https://github.com/richaj18/PLL_8x/blob/main/CP%20plot%20with%20up%201.PNG)
 
+<h3> Phase Frequency detector </h3>
+
+<b> With Leading VCO signal</b>
+![](https://github.com/richaj18/PLL_8x/blob/main/PFD%20plot%20with%20down%201.PNG)
+<b> Blue : </b> Reference Signal<br>
+<b> Red : </b> VCO Signal<br>
+<b> Orange : </b> UP Signal<br>
+<b> Green: </b> DOWN Signal<br>
+
+<h3> Voltage Controlled Oscillator </h3>
+![](https://github.com/richaj18/PLL_8x/blob/main/VCO%20plot.PNG)
+
+<h3> Phase Locked Loop </h3>
+![](https://github.com/richaj18/PLL_8x/blob/main/Plot%20for%20pll_pre.PNG)
+<b> Purple : </b> Charge Pump Output<br>
+<b> Pink : </b> VCO Frequency by 2<br>
+<b> Green : </b> VCO Frequency by 4<br>
+<b> Orange : </b> VCO Frequency by 8<br>
+<b> Red : </b> Reference Frequency<br>
+<b> Yellow : </b> DOWN Signal<br>
+<b> Maroon : </b> UP Signal<br>
+<br>
+
+<h2> Layout </h2>
 
 
 
