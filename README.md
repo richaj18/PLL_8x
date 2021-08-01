@@ -200,7 +200,17 @@ The code for frequency divider is shown below :
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/fd%20code.PNG)
 
+Running the code :
+
+![](https://github.com/richaj18/PLL_8x/blob/main/FD%20terminal%20window%201.PNG)
+
 Simulation result :
+
+<b> Frequency Divider </b>
+![](https://github.com/richaj18/PLL_8x/blob/main/FD%20plot.PNG)
+ <b> Blue : </b> Input Signal
+ <b> Red : </b> Output Signal
+
 
 
 
