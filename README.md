@@ -7,16 +7,15 @@ The lab sessions carried out for Layout using the Ngspice EDA Tool.
 <h2> Contents: </h2>
 
 1. [Phase Locked Loop - Theory](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Phase-Locked-Loop-)
-2. Tool Setup
-3. Development Flow
-4. Specifications
-5. Pre-Layout Simulations
-6. Layout
-7. Parasitic Extraction
-8. Post-Layout Simulations
-9. GDS and Tapeout
-10. References
-11. Acknowledgements
+2. [Tool Setup](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Tool-Setup-)
+4. [Specifications](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Specifications-)
+5. [Pre Layout Simulations](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Pre-Layout-Simulations-)
+6. [Layout](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Layout-)
+7. [Parasitic Extractions](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Parasitic-Extractions-)
+8. [Post layout Simulations](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Post-Layout-Simulations-)
+9. [GDA and Tapeout](https://github.com/richaj18/PLL_8x/blob/main/README.md#-GDS-and-Tapeout-)
+10. [References](https://github.com/richaj18/PLL_8x/blob/main/README.md#-References-)
+11. [Acknowledgements](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Acknowledgements-)
 
 <h2> Phase Locked Loop - Theory </h2>
 
