@@ -17,7 +17,9 @@ The lab sessions carried out for Layout using the Ngspice EDA Tool.
 9. [GDS and Tapeout](https://github.com/richaj18/PLL_8x/blob/main/README.md#-GDS-and-Tapeout-)
 10. [References](https://github.com/richaj18/PLL_8x/blob/main/README.md#-References-)
 11. [Acknowledgements](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Acknowledgements-)
-
+<br>
+<br>
+<br>
 
 <h2> Phase Locked Loop - Theory </h2>
 
@@ -117,7 +119,9 @@ Current sources are used at the top and the bottom with the Vctrl voltage to con
 The frequency Divider is as follows:
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/frequency%20divider.PNG)
-
+<br>
+<br>
+<br>
 
 <h2> Tool Setup </h2>
 
@@ -133,7 +137,9 @@ To execute the file, on the CMD window type :
 <b> <directory> magic -T <technology_file_name_from_PDK> <layout_file> </b>
 
 In this project, we have used sky130A.tech for the 130nm node technology from Google Skywater library.
-
+<br>
+<br>
+<br>
 
 <h2> Development Flow </h2>
 
@@ -144,7 +150,9 @@ In this project, we have used sky130A.tech for the 130nm node technology from Go
 5. Spice Netlist for the Layout
 6. Post Layput Simulation 
 7. GDS file and Tapeout
-
+<br>
+<br>
+<br>
 
 <h2> Specifications </h2>
 
@@ -164,9 +172,11 @@ These three makes <b> PVT(Process Voltage Temperature corner) </b>
 5. N = 8 (Multiplier)
 6. Jitter(RMS) <~ 20nsec
 7. Duty Cycle = 50%
+<br>
+<br>
+<br>
 
-
-<h2> Pre-Layout Simulations
+<h2> Pre-Layout Simulations </h2>
 
 This shows the theoretical or ideal simulations
 
