@@ -355,5 +355,5 @@ Simulation result :
 
 <h3> Acknowledgements </h3>
 
-
-3. By Fvultier - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=59956530 
+1. GT, LLC - https://zipcpu.com/dsp/2017/12/14/logic-pll.html
+2. Electronics Stackexchange - https://electronics.stackexchange.com/questions/301402/phase-frequency-detector-in-pll
