@@ -239,7 +239,7 @@ Similarly pre layout simulations were carried out for all the circuits of the PL
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/Plot%20for%20pll_pre.PNG)<br>
 <b> Purple : </b> Charge Pump Output<br>
-<b> Pink : </b> VCO Frequency by 2<br>
+<b> Pink : </b VCO Frequency by 2<br>
 <b> Green : </b> VCO Frequency by 4<br>
 <b> Orange : </b> VCO Frequency by 8<br>
 <b> Red : </b> Reference Frequency<br>
@@ -249,25 +249,64 @@ Similarly pre layout simulations were carried out for all the circuits of the PL
 
 <h2> Layout </h2>
 
+Opening the layout window, command : <br>
+<b> <directory_name> magic -T sky130A.tech </b> <br>
+In layout, the following color codes are used : <br>
+  1.n-diffusion - plain green<br>
+  2.p-diffusion - plain orange<br>
+  3.polysilicon - red<br>
+  4.metal1 layer - purple<br>
+  5.locali - blue<br>
 
+To connect two metal layers, we use m2contact. To connect local interconnect(locali) 
+and metal, we use via(viali).
 
+<h3> Charge Pump </h3>
 
+![](https://github.com/richaj18/PLL_8x/blob/main/cp%20layout.PNG)<br>
+<b> Area : </b>132.29 sq units<br>
 
+<h3> Frequency detector </h3>
 
+![](https://github.com/richaj18/PLL_8x/blob/main/fd%20layout.PNG)<br>
+<b> Area : </b>29.92 sq units<br>
 
+<h3> MUX </h3>
 
+![](https://github.com/richaj18/PLL_8x/blob/main/mux%20layout.PNG)<br>
+<b> Area : </b>12.12 sq units<br>
 
+<h3> Phase Frequency Detector </h3>
 
+![](https://github.com/richaj18/PLL_8x/blob/main/pfd%20layout.PNG)<br>
+<b> Area : </b>49.09 sq units<br>
 
 
+<h3> Voltage Controlled Oscillator </h3>
 
+![](https://github.com/richaj18/PLL_8x/blob/main/vco%20layout.PNG)<br>
+<b> Area : </b>57.73 sq units<br>
 
 
+<h3> Phase Locked Loop </h3>
 
+![](https://github.com/richaj18/PLL_8x/blob/main/pll%20layout.PNG)<br>
+<b> Area : </b>496.03 sq units<br>
+<br>
 
+<h2> Parasitic Extraction </h2>
 
+When the layout has been done, spice file is being generated to know the effects of
+wire capacitance and resistenace, their lengths, area etc.
 
+TO select the design, press "i". In the tckon window type : <br>
+<b> extract all </b> - this extracts all the information in the .ext file<br>
+Now we need to convert this .ext into .spice file
+<b> ext2spice cthresh <value> rthresh <value> </b><br>
+<b> ext2spice </b><br>
+<br>
 
+<h2> Post Layout Simulation </h2>
 
 
 
@@ -400,7 +439,22 @@ Similarly pre layout simulations were carried out for all the circuits of the PL
 
 
 
-<h3> References </h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2> References </h2>
 
 1. GT, LLC - https://zipcpu.com/dsp/2017/12/14/logic-pll.html
 2. Electronics Stackexchange - https://electronics.stackexchange.com/questions/301402/phase-frequency-detector-in-pll
