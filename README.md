@@ -87,3 +87,218 @@ output of the PFD into analogue signal. This can be done through "Current Steeri
 and discharging of the capacitor. But why only the capacitor is used and not a resistive load, this is because we <br>
 are interested in the avarage time of [UP-DOWN] which is achieved by observing the voltage of capacitor. <br>
 
+![](https://github.com/richaj18/PLL_8x/blob/main/current%20steering.png)
+
+The output voltage may have fluctuations due to the rise and fall times of UP and DOWN, and thus to have a smooth transition
+we have a loop filter.
+
+<h4> Loop Filter </h4>
+
+Only one capacitor at the output the Charge pump makes the system unstable because if we see the frequency domain analysis of
+the circuit then there will be two poles at in the transfer function which makes it oscillating anf highly unstable.
+Thus a RC LPF is added at the output such that output gets stabilize.
+
+![](https://github.com/richaj18/PLL_8x/blob/main/loop%20filter.png) 
+
+The values of R1 and Cx are selected such that the output signal(input to the VCO) is stable, <br>
+<b> Cx = C/10 </b>
+Also, we want the output signal not to fluctuating, so
+<b> Loop BW = fref/10 </b>
+
+<h4> Voltage Controlled Oscillator and Frequency Divider </h4>
+
+Till now we have achieved two things - accurancy and spectral purity. Now for flexibility Current Starved is used in VCO.
+VCO is a combination of odd number of inverters and in particular the ring oscillator.<br>
+Current sources are used at the top and the bottom with the Vctrl voltage to control the ring oscillator.
+
+![](https://github.com/richaj18/PLL_8x/blob/main/vco%20current%20starved.PNG)
+
+The frequency Divider is as follows:
+
+![](https://github.com/richaj18/PLL_8x/blob/main/frequency%20divider.PNG)
+
+
+<h3> Tool Setup </h3>
+
+<h4> NgSpice Tool </h4>
+NgSpice directly simulates the circuit(.cir) file given and plots the results according to the specifications mentioned in the
+circuit file.
+To execute the circuite file, on the CMD window type : 
+<b> <directory_name_where_files_are_present> <file_name>.cir </b>
+
+<h4> Magic Tool </h4>
+Magic is used for designing the layout file, write the GDS file for fabrication and also to extracrt the parisitics.
+To execute the file, on the CMD window type :
+<b> <directory> magic -T <technology_file_name_from_PDK> <layout_file> </b>
+
+In this project, we have used sky130A.tech for the 130nm node technology from Google Skywater library.
+
+
+<h3> Development Flow </h3>
+
+1. Specifications for the design are initiated
+2. Circuit is being made to meet the specifications in pre-layout 
+3. Developing the layout 
+4. Extraction of the parastics ie capacitive effect due to width, area etc
+5. Spice Netlist for the Layout
+6. Post Layput Simulation 
+7. GDS file and Tapeout
+
+<h3> Specifications </h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> Acknowledgements </h3>
+
+
+3. By Fvultier - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=59956530 
