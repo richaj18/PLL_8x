@@ -6,7 +6,7 @@ The lab sessions carried out for Layout using the Ngspice EDA Tool.
 
 <h2> Contents: </h2>
 
-1. Phase Locked Loop - Theory
+1. [Phase Locked Loop - Theory](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Phase-Locked-Loop-)
 2. Tool Setup
 3. Development Flow
 4. Specifications
@@ -145,6 +145,59 @@ In this project, we have used sky130A.tech for the 130nm node technology from Go
 7. GDS file and Tapeout
 
 <h2> Specifications </h2>
+
+1. Corner - TT(typical-typical)
+   This shows the outcome of the doping process
+   When the doping of the transistor is done, the exact concentartion is varied which makes transistor fast or slow
+
+2. Supply Voltage - 1.8Volts
+3. Room Temperature
+
+These three makes <b> PVT(Process Voltage Temperature corner) </b>
+
+4. Input frequency
+   fmin = 5MHz
+   fmax = 12.5 MHz
+
+5. N = 8 (Multiplier)
+6. Jitter(RMS) <~ 20nsec
+7. Duty Cycle = 50%
+
+
+<h2> Pre-Layout Simulations
+
+This shows the theoretical or ideal simulations
+
+<h3> Frequency Divider </h3>
+The circuit for frequency divider was seen above using the D flip flop, and at the transistor level this can be 
+observed as follows : 
+
+![](https://github.com/richaj18/PLL_8x/blob/main/frequency%20divider%20circuit.PNG)
+
+Firstly cloning the transistor modules needed for simulation from the primitive libraries of sky130.lib
+The files needed <b>nfet_1v8</b> and <b>pfet_1v8</b> and <b> "tt.pm3.spice" </b>
+Copying these files in a seperate folder <b> spice_lib </b>
+Generating the <b> sky130.lib </b> by using the commands : 
+
+![](https://github.com/richaj18/PLL_8x/blob/main/sky130_lib%20cmd.PNG)
+
+Now writing for the circuit in fd.cir file
+
+the transistor in sky130 is modelled as sub circuit which is written as follows :
+
+<b> xm1 d g s b sky130_fd_pr_pfet_1v8 length width </b>
+
+<b>x</b> : the sub circuit
+<b>m</b> : mosfet
+
+The code for frequency divider is shown below : 
+
+![](https://github.com/richaj18/PLL_8x/blob/main/fd%20code.PNG)
+
+Simulation result :
+
+
+
 
 
 
