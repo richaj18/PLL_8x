@@ -1,4 +1,4 @@
-# 130nm PLL 8x Clock Multiplier
+# PLL 8x Clock Multiplier
 
 The spice simulations were done using the Ngspice Open source EDA.
 The lab sessions carried out for Layout using the Ngspice EDA Tool.
@@ -35,3 +35,55 @@ PLL is a control system which mimics the reference signal having the same freque
 and a constant phase difference between the reference signal and output signal generated. <br>
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/1.png)
+
+Futher dwelling into each part of this control system 
+
+![](https://github.com/richaj18/PLL_8x/blob/main/PLL%20loop.png)
+
+<h4> Phase Frequency detector(PFD) </h4>
+
+There are two inputs to it - the reference signal from the Quartz crystal and the output signal from the VCO. <br>
+It detects the phase difference between the two. <br>
+
+For this we can use the XOR gate but it is not an optimum solution as it is not able to dtect the difference at npie, <br>
+also it gets locked into the harmonics of the refernce signal.<br>
+
+Thus, we use a sequential circuit for the same using the D flip flop. <br>
+Below is the lagging signal ie when the output signal from the VCO is delayed from the reference signal. <br>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/PFD%20theory2%20up.PNG)
+
+But if the output signal is leading the reference signal, thus we require another D flip flop <br>
+to detect this leading signal caleed as the DOWN signal. <br>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/PFD%20theory1.PNG)
+
+As we can see from the above diagrams, we see the following observations : <br>
+1. When the falling edge of the reference signal arrives first, the Output is High, <br>
+   and then falling edge of output signal arrives it gets cleared. <br>
+   This makes the UP signal. <br>
+
+2. When the falling edge of the output signal arrives first, the output becomes High, <br>
+   and then falling edge of reference signal arrives it gets cleared. <br>
+   This is the DOWN signal. <br>
+
+Thus making the State Machine for this is as follows : <br>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/state%20machine.png)
+
+Since there are three states, we require two flip flops for the same, for one flip flop reference signal is the clock, <br>
+for the flip flop the output signal is the clock. The output of both are connected to the AND gate which goes to the CLR <br>
+such that when both are 1 the flip flop is reset. <br>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/d-flipflop.PNG)
+
+But the disadvantage of this is the Dead Zone. When the phase difference between the refernce signal and output signal is <br>
+very less, then due to the delay of gates it is not able to detect the difference and might be skipped. <br>
+
+<h5> Charge Pump </h5>
+
+PFD generates the digital signal, but the input to the VCO is an analogue signal, thus Charge Pump converts the <br>
+output of the PFD into analogue signal. This can be done through "Current Steering" circuit ie. by charging <br>
+and discharging of the capacitor. But why only the capacitor is used and not a resistive load, this is because we <br>
+are interested in the avarage time of [UP-DOWN] which is achieved by observing the voltage of capacitor. <br>
+
