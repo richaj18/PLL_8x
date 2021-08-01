@@ -235,7 +235,7 @@ Similarly pre layout simulations were carried out for all the circuits of the PL
 ![](https://github.com/richaj18/PLL_8x/blob/main/VCO%20plot.PNG)
 
 <h3> Phase Locked Loop </h3>
-![](https://github.com/richaj18/PLL_8x/blob/main/Plot%20for%20pll_pre.PNG)
+![](https://github.com/richaj18/PLL_8x/blob/main/Plot%20for%20pll_pre.PNG)<br>
 <b> Purple : </b> Charge Pump Output<br>
 <b> Pink : </b> VCO Frequency by 2<br>
 <b> Green : </b> VCO Frequency by 4<br>
