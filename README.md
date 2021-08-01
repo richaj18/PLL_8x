@@ -300,17 +300,86 @@ When the layout has been done, spice file is being generated to know the effects
 wire capacitance and resistenace, their lengths, area etc.
 
 TO select the design, press "i". In the tckon window type : <br>
-<b> extract all </b> - this extracts all the information in the .ext file<br>
-Now we need to convert this .ext into .spice file
-<b> ext2spice cthresh <value> rthresh <value> </b><br>
-<b> ext2spice </b><br>
+<b> $extract all </b> - this extracts all the information in the .ext file<br>
+Now we need to convert this .ext into .spice file<br>
+<b> $ext2spice cthresh <value> rthresh <value> </b><br>
+<b> $ext2spice </b><br>
 <br>
 
 <h2> Post Layout Simulation </h2>
 
+Once the parasitic extraction is done, we need to check the simulations for our sub circuits
+again, to verify their functioning and to make changes as necessary.<br>
 
+<b> Command window : </b>
+![](https://github.com/richaj18/PLL_8x/blob/main/pfd%20post%20layout%20terminal%20window.PNG)<br>
 
+<h3> Phase Frequency detector</h3>
 
+<b> Simulation : </b><br>
+<b> With Delay of 1nsec </b> <br>
+![](https://github.com/richaj18/PLL_8x/blob/main/post%20layout%20sim%20for%20PFD%20plot.%20with%20delay1ns.PNG)<br>
+<b> Orange : </b> Reference Signal <br>
+<b> Green : </b> VCO Signal <br>
+<b> Blue : </b> DOWN Signal <br>
+<b> Red : </b> UP Signal <br>
+
+<b> With Delay of 10nsec </b> <br>
+![](https://github.com/richaj18/PLL_8x/blob/main/post%20layout%20sim%20for%20PFD%20plot.PNG)<br>
+<b> Orange : </b> Reference Signal <br>
+<b> Green : </b> VCO Signal <br>
+<b> Blue : </b> DOWN Signal <br>
+<b> Red : </b> UP Signal <br>
+
+<h3> Charge Pump </h3>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/cp%20post%20layout%20sim.PNG)<br>
+<b> Orange : </b> Charhe Pump Output <br>
+<b> Blue : </b> DOWN Signal <br>
+<b> Red : </b> UP Signal <br>
+
+<h3> Frequency Division </h3>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/fd%20postlayout%20sim.PNG)<br>
+<b> Blue : </b> Output Signal <br>
+<b> Red : </b> Input Signal <br>
+
+<h3> MUX </h3>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/mux%20post%20layout%20sim.PNG)<br>
+
+<h3> Voltage Controlled Oscillator </h3>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/vco%20post%20layout%20sim.PNG)<br>
+
+<h3> Phase Locked Loop </h3>
+
+![](https://github.com/richaj18/PLL_8x/blob/main/pll%20post%20lay%20sim.PNG)<br>
+<br>
+
+<h2> GDS and Tapeout </h2>
+
+When the post simulation is completed of the design, we need to write the gds file for our design
+which needs to be sent for the fabrication. This is done in the Magic Tool, by opening the 
+layout of the complete design and then <b>Files->Write GDS</b>.<br>
+
+<h3> Tapeout </h3>
+
+Tapeout means to send our design for fabrication after preparing all the additional support like I/O,
+memory, communicationa protocols like SPI, I2C, UART and other peripherals, testing mechanisms
+for debugging, ESD etc. We should choose a driver to enable our IP to meet the desired requiremnets to
+undergo fabrication. For this we use Efabless Caravel SoC template. "Carevel" means the carrier of our
+design.<br>
+It will provide the user project area on to the chip, where we will place our design and connect it to
+the IO pads of the SOC.
+<br>
+
+<h2> Acknowledgement </h2>
+
+1. I would like to thank Mr. Kunal Ghosh, Co-Founder ![](https://www.vlsisystemdesign.com) for organizing
+this 2-Day Workshop which taught me a lot.<br>
+
+2. I would like to thank Ms. Lakshmi S, mentor who guided me throughout the workshop and design of the PLL.
 
 
 
