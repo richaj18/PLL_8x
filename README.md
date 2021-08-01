@@ -76,7 +76,7 @@ Since there are three states, we require two flip flops for the same, for one fl
 for the other flip flop the output signal is the clock. The output of both are connected to the AND gate which goes to the CLR
 such that when both are 1 the flip flop is reset. <br>
 
-![](https://github.com/richaj18/PLL_8x/blob/main/d-flipflop.PNG)
+![](https://github.com/richaj18/PLL_8x/blob/main/d%20flip%20flop.PNG)
 
 But the disadvantage of this is the Dead Zone. When the phase difference between the refernce signal and output signal is <br>
 very less, then due to the delay of gates it is not able to detect the difference and might be skipped. <br>
