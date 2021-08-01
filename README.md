@@ -376,7 +376,7 @@ the IO pads of the SOC.
 
 <h2> Acknowledgement </h2>
 
-1. I would like to thank Mr. Kunal Ghosh, Co-Founder ![](https://www.vlsisystemdesign.com) for organizing
+1. I would like to thank Mr. Kunal Ghosh, Co-Founder [VSD](https://www.vlsisystemdesign.com-VSD) for organizing
 this 2-Day Workshop which taught me a lot.<br>
 
 2. I would like to thank Ms. Lakshmi S, mentor who guided me throughout the workshop and design of the PLL.
