@@ -3,8 +3,8 @@
 
 # PLL 8x Clock Multiplier
 
-2 Day Workshop on PLL Design using Google SkyWater 130nm Technology
-The spice simulations were done using the Ngspice Open source EDA.
+2 Day Workshop on PLL Design using Google SkyWater 130nm Technology<br>
+The spice simulations were done using the Ngspice Open source EDA.<br>
 The lab sessions carried out for Layout using the Ngspice EDA Tool.
 
 
@@ -50,7 +50,7 @@ Futher dwelling into each part of this control system
 There are two inputs to it - the reference signal from the Quartz crystal and the output signal from the VCO. <br>
 It detects the phase difference between the two. <br>
 
-For this we can use the XOR gate but it is not an optimum solution as it is not able to dtect the difference at npie, <br>
+For this we can use the XOR gate but it is not an optimum solution as it is not able to detect the difference at nπ, <br>
 also it gets locked into the harmonics of the refernce signal.<br>
 
 Thus, we use a sequential circuit for the same using the D flip flop. <br>
