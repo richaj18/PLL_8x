@@ -19,7 +19,7 @@ The lab sessions carried out for Layout using the Ngspice EDA Tool.
 7. [Parasitic Extractions](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Parasitic-Extractions-)
 8. [Post layout Simulations](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Post-Layout-Simulations-)
 9. [GDS and Tapeout](https://github.com/richaj18/PLL_8x/blob/main/README.md#-GDS-and-Tapeout-)
-10. (https://github.com/richaj18/PLL_8x/blob/main/README.md#-Acknowledgements-)
+10. [Acknowledgments](https://github.com/richaj18/PLL_8x/blob/main/README.md#-Acknowledgements-)
 11. [References](https://github.com/richaj18/PLL_8x/blob/main/README.md#-References-)
  
 
