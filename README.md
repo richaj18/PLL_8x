@@ -1,5 +1,9 @@
+
+![](https://github.com/richaj18/PLL_8x/blob/main/vsd%20workshop%20logo.jpg)
+
 # PLL 8x Clock Multiplier
 
+2 Day Workshop on PLL Design using Google SkyWater 130nm Technology
 The spice simulations were done using the Ngspice Open source EDA.
 The lab sessions carried out for Layout using the Ngspice EDA Tool.
 
@@ -353,7 +357,7 @@ Simulation result :
 
 
 
-<h3> Acknowledgements </h3>
+<h3> References </h3>
 
 1. GT, LLC - https://zipcpu.com/dsp/2017/12/14/logic-pll.html
 2. Electronics Stackexchange - https://electronics.stackexchange.com/questions/301402/phase-frequency-detector-in-pll
