@@ -52,12 +52,12 @@ also it gets locked into the harmonics of the refernce signal.<br>
 Thus, we use a sequential circuit for the same using the D flip flop. <br>
 Below is the lagging signal ie when the output signal from the VCO is delayed from the reference signal. <br>
 
-![](https://github.com/richaj18/PLL_8x/blob/main/PFD%20theory2%20up.PNG)
+![](https://github.com/richaj18/PLL_8x/blob/main/lagging.PNG)
 
 But if the output signal is leading the reference signal, thus we require another D flip flop <br>
 to detect this leading signal caleed as the DOWN signal. <br>
 
-![](https://github.com/richaj18/PLL_8x/blob/main/PFD%20theory1.PNG)
+![](https://github.com/richaj18/PLL_8x/blob/main/leading.PNG)
 
 As we can see from the above diagrams, we see the following observations : <br>
 1. When the falling edge of the reference signal arrives first, the Output is High, and then falling edge of output 
