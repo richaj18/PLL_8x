@@ -120,7 +120,7 @@ Current sources are used at the top and the bottom with the Vctrl voltage to con
 
 The frequency Divider is as follows:
 
-![](https://github.com/richaj18/PLL_8x/blob/main/frequency%20divider.PNG)
+![](https://github.com/richaj18/PLL_8x/blob/main/freq%20divider.PNG)
 <br>
 
 <h2> Tool Setup </h2>
@@ -382,148 +382,8 @@ this 2-Day Workshop which taught me a lot.<br>
 2. I would like to thank Ms. Lakshmi S, mentor who guided me throughout the workshop and design of the PLL.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2> References </h2>
 
 1. GT, LLC - https://zipcpu.com/dsp/2017/12/14/logic-pll.html
-2. Electronics Stackexchange - https://electronics.stackexchange.com/questions/301402/phase-frequency-detector-in-pll
+2. Frequency Division - https://www.electronics-tutorials.ws/counter/count_1.html
+3. Electronics Stackexchange - https://electronics.stackexchange.com/questions/301402/phase-frequency-detector-in-pll
