@@ -89,7 +89,7 @@ very less, then due to the delay of gates it is not able to detect the differenc
 PFD generates the digital signal, but the input to the VCO is an analogue signal, thus Charge Pump converts the output of 
 the PFD into analogue signal. This can be done through "Current Steering" circuit ie. by charging and discharging of the 
 capacitor. 
-But why only the capacitor is used and not a resistive load, this is because we are interested in the avarage time of [UP-DOWN](t) 
+But why only the capacitor is used and not a resistive load, this is because we are interested in the avarage time of (UP-DOWN)(t) 
 which is achieved by observing the voltage of capacitor. <br>
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/current%20steering.png)
