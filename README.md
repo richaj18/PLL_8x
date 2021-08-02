@@ -128,7 +128,7 @@ The frequency Divider is as follows:
 <h3> NgSpice Tool </h3>
 NgSpice directly simulates the circuit(.cir) file given and plots the results according to the specifications mentioned in the
 circuit file.
-To execute the circuite file, on the CMD window type : 
+To execute the circuite file, on the CMD window type : <br>
 <b> directory_name_where_files_are_present file_name.cir </b>
 
 <h3> Magic Tool </h3>
