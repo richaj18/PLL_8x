@@ -49,8 +49,8 @@ Futher dwelling into each part of this control system
 There are two inputs to it - the reference signal from the Quartz crystal and the output signal from the VCO. <br>
 It detects the phase difference between the two. <br>
 
-For this we can use the XOR gate but it is not an optimum solution as it is not able to detect the difference at nπ, <br>
-also it gets locked into the harmonics of the refernce signal.<br>
+For this we can use the XOR gate but it is not an optimum solution as it is not able to detect the difference at nπ, also 
+it gets locked into the harmonics of the refernce signal.<br>
 
 Thus, we use a sequential circuit for the same using the D flip flop. <br>
 Below is the lagging signal ie when the output signal from the VCO is delayed from the reference signal. <br>
@@ -86,10 +86,11 @@ very less, then due to the delay of gates it is not able to detect the differenc
 
 <h3> Charge Pump </h3>
 
-PFD generates the digital signal, but the input to the VCO is an analogue signal, thus Charge Pump converts the <br>
-output of the PFD into analogue signal. This can be done through "Current Steering" circuit ie. by charging <br>
-and discharging of the capacitor. But why only the capacitor is used and not a resistive load, this is because we <br>
-are interested in the avarage time of [UP-DOWN] which is achieved by observing the voltage of capacitor. <br>
+PFD generates the digital signal, but the input to the VCO is an analogue signal, thus Charge Pump converts the output of 
+the PFD into analogue signal. This can be done through "Current Steering" circuit ie. by charging and discharging of the 
+capacitor. 
+But why only the capacitor is used and not a resistive load, this is because we are interested in the avarage time of [UP-DOWN](t) 
+which is achieved by observing the voltage of capacitor. <br>
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/current%20steering.png)
 
@@ -100,7 +101,7 @@ we have a loop filter.
 
 Only one capacitor at the output of the Charge pump makes the system unstable because if we see the frequency domain analysis of
 the circuit then there will be two poles in the transfer function which makes it oscillating and highly unstable.
-Thus a RC LPF is added at the output such that output gets stabilize.
+Thus a RC LPF is added at the output such that output gets stabilized.
 
 ![](https://github.com/richaj18/PLL_8x/blob/main/loop%20filter.png) 
 
@@ -128,12 +129,12 @@ The frequency Divider is as follows:
 NgSpice directly simulates the circuit(.cir) file given and plots the results according to the specifications mentioned in the
 circuit file.
 To execute the circuite file, on the CMD window type : 
-<b> <directory_name_where_files_are_present> <file_name>.cir </b>
+<b> directory_name_where_files_are_present file_name.cir </b>
 
 <h3> Magic Tool </h3>
-Magic is used for designing the layout file, write the GDS file for fabrication and also to extracrt the parisitics.
-To execute the file, on the CMD window type :
-<b> <directory> magic -T <technology_file_name_from_PDK> <layout_file> </b>
+Magic is used for designing the layout file, writing the GDS file for fabrication and also to extracrt the parisitics.
+To execute the file, on the CMD window type :<br>
+<b> directory magic -T technology_file_name_from_PDK layout_file </b>
 
 In this project, we have used sky130A.tech for the 130nm node technology from Google Skywater library.
 <br>
